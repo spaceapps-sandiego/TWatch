@@ -3,20 +3,31 @@ var db = require('./db');
 
 var trans = sql.define({
 	name: 'transients',
-	columns: ['id', 'ra', 'dec']
+	columns: ['id', 'name', 'ra', 'dec']
 })
 
-function findTransients(cb) {
-	var query = trans.select(trans.star()).from(trans).toQuery();
+function findTransients(opts, cb) {
+	var query;
+
+	if (opts.name !== undefined) {
+		query = trans
+			.select(trans.star()) 			// SELECT * 
+			.from(trans) 		  			// FROM transient
+			.where(trans.name.equals(name)) // WHERE name = <NAME>;
+			.toQuery();
+	} else {
+		query = trans.select(trans.star()).from(trans).toQuery();
+	}
+
 	db.query(query, cb);
 }
 
-function findTransientByName(name, cb) {
+function findTransientById(id, cb) {
 	var query = trans
-		.select(trans.star()) 			// SELECT * 
-		.from(trans) 		  			// FROM transient
-		.where(trans.name.equals(name)) // WHERE name = <NAME>
-		.limit(1)						// LIMIT 1;
+		.select(trans.star())		// SELECT *
+		.from(trans)				// FROM transient
+		.where(trans.id.equals(id)) // WHERE id = <ID>
+		.limit(1)					// LIMIT 1;
 		.toQuery();
 
 	db.query(query, cb);

@@ -10,10 +10,21 @@ var api = express();
 api.use(bodyParser.json());
 api.use(bodyParser.urlencoded({ extended: true }));
 
-api.get('/api/transients', function(req, res) {
-	trans.findTransients(function(err, rows) {
-		
+api.get('/api/v1/transients', function(req, res) {
+	trans.findTransients({
+		name: req.body.name
+	}, function(err, rows) {
+		res.json({ result: rows });
 	});
+});
+
+api.get('/api/v1/transients/:id', function(req, res) {
+	trans.findTransientById(
+		req.params.id,
+		function(err, rows) {
+			res.json({ result: rows[0] });
+		}
+	);
 });
 
 // start up server
