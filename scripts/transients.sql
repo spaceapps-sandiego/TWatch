@@ -16,3 +16,17 @@ CREATE TABLE transients (
 	`dec` VARCHAR(256) NOT NULL,
 	PRIMARY KEY(ID)
 ) ENGINE=InnoDB;
+DROP TABLE IF EXISTS intensities;
+CREATE  TABLE `trans`.`intensities` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `val` VARCHAR(128) NOT NULL ,
+  `trans_id` INT NOT NULL ,
+  `detected_time` TIMESTAMP NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `trans_id_idx` (`trans_id` ASC) ,
+  CONSTRAINT `trans_id`
+    FOREIGN KEY (`trans_id` )
+    REFERENCES `trans`.`transients` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+

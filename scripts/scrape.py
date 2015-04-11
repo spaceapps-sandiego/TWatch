@@ -36,7 +36,7 @@ def inject(table):
     cur.close()
     if not t:
       cur = db.cursor()
-      cur.execute('INSERT INTO transients (name) VALUES(%s)',(row[1],))
+      cur.execute("INSERT INTO transients VALUES(AUTO_INCREMET(),'1',%s,'10','10')",(row[1],))
       cur.close()
     
     cur = db.cursor()
@@ -46,7 +46,11 @@ def inject(table):
     
     id = t['id']
     cur = db.cursor()
-    cur.execute('INSERT INTO intensities (trans_id, val, detect_date) VALUES (%s, %s, NOW())', (id, row[6]))
+    cur.execute('INSERT INTO intensities (trans_id, val, detected_time) VALUES (%s, %s, NOW())', (id, row[6]))
     cur.close()
   
   db.commit()
+
+if __name__ == '__main__':
+  tableout = scrape()
+  inject(tableout)
