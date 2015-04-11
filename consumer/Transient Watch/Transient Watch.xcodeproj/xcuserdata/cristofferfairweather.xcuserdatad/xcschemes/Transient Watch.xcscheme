@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1567E53E1AD9B2BD009EEB54"
+               BlueprintIdentifier = "152C608C1AD9CB680007926C"
                BuildableName = "Transient Watch.app"
                BlueprintName = "Transient Watch"
                ReferencedContainer = "container:Transient Watch.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1567E5581AD9B2BD009EEB54"
+               BlueprintIdentifier = "152C60A31AD9CB680007926C"
                BuildableName = "Transient WatchTests.xctest"
                BlueprintName = "Transient WatchTests"
                ReferencedContainer = "container:Transient Watch.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1567E5581AD9B2BD009EEB54"
+               BlueprintIdentifier = "152C60A31AD9CB680007926C"
                BuildableName = "Transient WatchTests.xctest"
                BlueprintName = "Transient WatchTests"
                ReferencedContainer = "container:Transient Watch.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1567E53E1AD9B2BD009EEB54"
+            BlueprintIdentifier = "152C608C1AD9CB680007926C"
             BuildableName = "Transient Watch.app"
             BlueprintName = "Transient Watch"
             ReferencedContainer = "container:Transient Watch.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1567E53E1AD9B2BD009EEB54"
+            BlueprintIdentifier = "152C608C1AD9CB680007926C"
             BuildableName = "Transient Watch.app"
             BlueprintName = "Transient Watch"
             ReferencedContainer = "container:Transient Watch.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1567E53E1AD9B2BD009EEB54"
+            BlueprintIdentifier = "152C608C1AD9CB680007926C"
             BuildableName = "Transient Watch.app"
             BlueprintName = "Transient Watch"
             ReferencedContainer = "container:Transient Watch.xcodeproj">
