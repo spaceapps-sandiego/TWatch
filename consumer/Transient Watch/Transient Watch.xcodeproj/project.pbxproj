@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15BDEB1D1AD99DE0002754FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDEB1C1AD99DE0002754FD /* AppDelegate.swift */; };
+		15BDEB201AD99DE0002754FD /* Transient_Watch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BDEB1E1AD99DE0002754FD /* Transient_Watch.xcdatamodeld */; };
+		15BDEB221AD99DE0002754FD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDEB211AD99DE0002754FD /* MasterViewController.swift */; };
+		15BDEB241AD99DE0002754FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDEB231AD99DE0002754FD /* DetailViewController.swift */; };
+		15BDEB271AD99DE0002754FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BDEB251AD99DE0002754FD /* Main.storyboard */; };
+		15BDEB291AD99DE0002754FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BDEB281AD99DE0002754FD /* Images.xcassets */; };
+		15BDEB2C1AD99DE0002754FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BDEB2A1AD99DE0002754FD /* LaunchScreen.xib */; };
+		15BDEB381AD99DE0002754FD /* Transient_WatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDEB371AD99DE0002754FD /* Transient_WatchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15BDEB321AD99DE0002754FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BDEB0F1AD99DE0002754FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15BDEB161AD99DE0002754FD;
+			remoteInfo = "Transient Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15BDEB171AD99DE0002754FD /* Transient Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transient Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BDEB1B1AD99DE0002754FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BDEB1C1AD99DE0002754FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15BDEB1F1AD99DE0002754FD /* Transient_Watch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Transient_Watch.xcdatamodel; sourceTree = "<group>"; };
+		15BDEB211AD99DE0002754FD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		15BDEB231AD99DE0002754FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		15BDEB261AD99DE0002754FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15BDEB281AD99DE0002754FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15BDEB2B1AD99DE0002754FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		15BDEB311AD99DE0002754FD /* Transient WatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Transient WatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BDEB361AD99DE0002754FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BDEB371AD99DE0002754FD /* Transient_WatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transient_WatchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15BDEB141AD99DE0002754FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BDEB2E1AD99DE0002754FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15BDEB0E1AD99DE0002754FD = {
+			isa = PBXGroup;
+			children = (
+				15BDEB191AD99DE0002754FD /* Transient Watch */,
+				15BDEB341AD99DE0002754FD /* Transient WatchTests */,
+				15BDEB181AD99DE0002754FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15BDEB181AD99DE0002754FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15BDEB171AD99DE0002754FD /* Transient Watch.app */,
+				15BDEB311AD99DE0002754FD /* Transient WatchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15BDEB191AD99DE0002754FD /* Transient Watch */ = {
+			isa = PBXGroup;
+			children = (
+				15BDEB1C1AD99DE0002754FD /* AppDelegate.swift */,
+				15BDEB211AD99DE0002754FD /* MasterViewController.swift */,
+				15BDEB231AD99DE0002754FD /* DetailViewController.swift */,
+				15BDEB251AD99DE0002754FD /* Main.storyboard */,
+				15BDEB281AD99DE0002754FD /* Images.xcassets */,
+				15BDEB2A1AD99DE0002754FD /* LaunchScreen.xib */,
+				15BDEB1E1AD99DE0002754FD /* Transient_Watch.xcdatamodeld */,
+				15BDEB1A1AD99DE0002754FD /* Supporting Files */,
+			);
+			path = "Transient Watch";
+			sourceTree = "<group>";
+		};
+		15BDEB1A1AD99DE0002754FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15BDEB1B1AD99DE0002754FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15BDEB341AD99DE0002754FD /* Transient WatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				15BDEB371AD99DE0002754FD /* Transient_WatchTests.swift */,
+				15BDEB351AD99DE0002754FD /* Supporting Files */,
+			);
+			path = "Transient WatchTests";
+			sourceTree = "<group>";
+		};
+		15BDEB351AD99DE0002754FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15BDEB361AD99DE0002754FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15BDEB161AD99DE0002754FD /* Transient Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BDEB3B1AD99DE0002754FD /* Build configuration list for PBXNativeTarget "Transient Watch" */;
+			buildPhases = (
+				15BDEB131AD99DE0002754FD /* Sources */,
+				15BDEB141AD99DE0002754FD /* Frameworks */,
+				15BDEB151AD99DE0002754FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Transient Watch";
+			productName = "Transient Watch";
+			productReference = 15BDEB171AD99DE0002754FD /* Transient Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15BDEB301AD99DE0002754FD /* Transient WatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BDEB3E1AD99DE0002754FD /* Build configuration list for PBXNativeTarget "Transient WatchTests" */;
+			buildPhases = (
+				15BDEB2D1AD99DE0002754FD /* Sources */,
+				15BDEB2E1AD99DE0002754FD /* Frameworks */,
+				15BDEB2F1AD99DE0002754FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15BDEB331AD99DE0002754FD /* PBXTargetDependency */,
+			);
+			name = "Transient WatchTests";
+			productName = "Transient WatchTests";
+			productReference = 15BDEB311AD99DE0002754FD /* Transient WatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15BDEB0F1AD99DE0002754FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "C Fairweather";
+				TargetAttributes = {
+					15BDEB161AD99DE0002754FD = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					15BDEB301AD99DE0002754FD = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 15BDEB161AD99DE0002754FD;
+					};
+				};
+			};
+			buildConfigurationList = 15BDEB121AD99DE0002754FD /* Build configuration list for PBXProject "Transient Watch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15BDEB0E1AD99DE0002754FD;
+			productRefGroup = 15BDEB181AD99DE0002754FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15BDEB161AD99DE0002754FD /* Transient Watch */,
+				15BDEB301AD99DE0002754FD /* Transient WatchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15BDEB151AD99DE0002754FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BDEB271AD99DE0002754FD /* Main.storyboard in Resources */,
+				15BDEB2C1AD99DE0002754FD /* LaunchScreen.xib in Resources */,
+				15BDEB291AD99DE0002754FD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BDEB2F1AD99DE0002754FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15BDEB131AD99DE0002754FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BDEB201AD99DE0002754FD /* Transient_Watch.xcdatamodeld in Sources */,
+				15BDEB1D1AD99DE0002754FD /* AppDelegate.swift in Sources */,
+				15BDEB221AD99DE0002754FD /* MasterViewController.swift in Sources */,
+				15BDEB241AD99DE0002754FD /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BDEB2D1AD99DE0002754FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BDEB381AD99DE0002754FD /* Transient_WatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15BDEB331AD99DE0002754FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15BDEB161AD99DE0002754FD /* Transient Watch */;
+			targetProxy = 15BDEB321AD99DE0002754FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15BDEB251AD99DE0002754FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BDEB261AD99DE0002754FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15BDEB2A1AD99DE0002754FD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BDEB2B1AD99DE0002754FD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15BDEB391AD99DE0002754FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15BDEB3A1AD99DE0002754FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15BDEB3C1AD99DE0002754FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Transient Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		15BDEB3D1AD99DE0002754FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Transient Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		15BDEB3F1AD99DE0002754FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Transient WatchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transient Watch.app/Transient Watch";
+			};
+			name = Debug;
+		};
+		15BDEB401AD99DE0002754FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Transient WatchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transient Watch.app/Transient Watch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15BDEB121AD99DE0002754FD /* Build configuration list for PBXProject "Transient Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BDEB391AD99DE0002754FD /* Debug */,
+				15BDEB3A1AD99DE0002754FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15BDEB3B1AD99DE0002754FD /* Build configuration list for PBXNativeTarget "Transient Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BDEB3C1AD99DE0002754FD /* Debug */,
+				15BDEB3D1AD99DE0002754FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15BDEB3E1AD99DE0002754FD /* Build configuration list for PBXNativeTarget "Transient WatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BDEB3F1AD99DE0002754FD /* Debug */,
+				15BDEB401AD99DE0002754FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15BDEB1E1AD99DE0002754FD /* Transient_Watch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15BDEB1F1AD99DE0002754FD /* Transient_Watch.xcdatamodel */,
+			);
+			currentVersion = 15BDEB1F1AD99DE0002754FD /* Transient_Watch.xcdatamodel */;
+			path = Transient_Watch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 15BDEB0F1AD99DE0002754FD /* Project object */;
+}
