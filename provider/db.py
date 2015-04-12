@@ -1,10 +1,12 @@
 from pydal import DAL, Field
+import os
 import sys
 
 db = None
 
 try:
-	db = DAL('mysql://trans:transFTW!@localhost/trans', entity_quoting=True, fake_migrate=True, folder='./tables') #mdb.connect('localhost', 'trans', 'transFTW!', 'trans', cursorclass=mdb.cursors.DictCursor)
+	table_folder = os.path.join(os.path.dirname(__file__), 'tables')
+	db = DAL('mysql://trans:transFTW!@localhost/trans', entity_quoting=True, fake_migrate=True, folder=table_folder) #mdb.connect('localhost', 'trans', 'transFTW!', 'trans', cursorclass=mdb.cursors.DictCursor)
 except Exception as e:
 	print 'Error %s' % (e,)
 	sys.exit(1)
