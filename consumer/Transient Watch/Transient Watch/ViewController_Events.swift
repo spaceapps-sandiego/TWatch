@@ -8,12 +8,39 @@
 
 import UIKit
 
-class ViewController_Events: UIViewController, UIBarPositioningDelegate {
+
+class ViewController_Events: UITableViewController, UIBarPositioningDelegate {
+    
+    var phenomenaEventData:Array<NSDictionary> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let url = NSURL(string: (serverPrefix as String)+"/api/v1/transients")
+        let request = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            
+            if let resultError = error as NSError? {
+                //Handle error!
+            }else{
+                self.loadEventData(data)
+            }
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated:animated)
+    }
+    
+    func loadEventData(eventData:NSData){
+        let json = NSJSONSerialization.JSONObjectWithData(eventData, options: NSJSONReadingOptions(1), error: nil) as! NSDictionary
+        let results = json["result"] as! NSArray;
+        
+        for detection in results {
+            phenomenaEventData.append(detection as! NSDictionary)
+        }
+//        println(self.phenomenaEventData)
     }
 
     override func didReceiveMemoryWarning() {
