@@ -76,7 +76,7 @@ def connectdb():
 
 def update_master(table):
 	db = connectdb()
-  count = 0
+	count = 0
 
 	for row in table:
 		name = row['Source Name']
@@ -90,12 +90,12 @@ def update_master(table):
 					ra = float(ra)
 					dec = float(dec)
 					dbinsert(db, "INSERT INTO transients (name, ra, `dec`, `type`) VALUES (%s,%s,%s,%s)", (name, ra, dec, source_type))
-          count+=1
+					count+=1
 				except ValueError as e:
 					continue
 
 	db.commit()
-  return count
+	return count
 
 def create_dict(row, fields):
 	if len(row) < len(fields):

@@ -13,3 +13,6 @@ def run():
 
 	# get knowns
 	insert_knowns()
+
+if __name__ == '__main__':
+	run()
