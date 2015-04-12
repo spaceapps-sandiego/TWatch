@@ -416,6 +416,7 @@
 				152C60B01AD9CB680007926C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		152C60B11AD9CB680007926C /* Build configuration list for PBXNativeTarget "Transient WatchTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				152C60B31AD9CB680007926C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
