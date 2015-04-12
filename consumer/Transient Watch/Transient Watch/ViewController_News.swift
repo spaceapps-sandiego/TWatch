@@ -13,6 +13,8 @@ import Fabric
 class ViewController_News: TWTRTimelineViewController, UIBarPositioningDelegate {
 
     convenience init() {
+        
+
         let client = Twitter.sharedInstance().APIClient
         let dataSource = TWTRUserTimelineDataSource(screenName: "fabric", APIClient: client)
         

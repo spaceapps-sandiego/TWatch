@@ -19,7 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+//        Twitter.sharedInstance().startWithConsumerKey("your_key", consumerSecret: "your_secret")
+        Fabric.with([Twitter.sharedInstance()])
+        Twitter.sharedInstance().logInGuestWithCompletion { guestSession, error in
+            if (guestSession != nil) {
+                // make API calls that do not require user auth
+            } else {
+                println("error: \(error.localizedDescription)");
+            }
+        }
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false);
         var types: UIUserNotificationType = UIUserNotificationType.Badge |
@@ -30,8 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings( settings )
         application.registerForRemoteNotifications()
         
-//        Fabric.with(Twitter());
-                return true
+                        return true
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {

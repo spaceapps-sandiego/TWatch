@@ -65,12 +65,20 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="2Cm-1h-8oa"/>
                                 </connections>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ltZ-Sr-4rw">
+                                <rect key="frame" x="0.0" y="72" width="414" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ltZ-Sr-4rw" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="9RW-ut-FLd"/>
+                            <constraint firstItem="ltZ-Sr-4rw" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="52" id="Bpc-KD-Rep"/>
                             <constraint firstItem="8eR-D0-1Hq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="G20-ae-p0k"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ltZ-Sr-4rw" secondAttribute="bottom" id="VFk-gl-QZ8"/>
                             <constraint firstItem="8eR-D0-1Hq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="q1Y-Ph-VgH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8eR-D0-1Hq" secondAttribute="trailing" constant="-16" id="u7w-r6-5fY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ltZ-Sr-4rw" secondAttribute="trailing" constant="-16" id="xWm-q8-ppJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" image="NewsIcon" id="cPa-gy-q4n"/>
