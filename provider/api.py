@@ -32,7 +32,7 @@ def convert():
 	if not (ra and dec):
 		return jsonify({ 'error': '`ra` and `dec` are required' })
 
-	if from_type == 'j2000':
+	if from_type == 'j2000' or from_type is None:
 		ra, dec = convert_from_j2000(ra, dec)
 	else:
 		ra, dec = NaN, NaN
