@@ -2,4 +2,4 @@ venv
 *.log
 *.pyc
 *.pyx
-api.token
+api_token

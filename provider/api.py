@@ -4,13 +4,13 @@ import os
 NaN = float('nan')
 
 # initialize database
-from db import db
+from db import db, dbinsert, dbselectone
 import transients as trans
 from utils import convert_from_j2000
 
 API_TOKEN = None
 try:
-	f = open('../api.token', 'r')
+	f = open('provider/api_token', 'r')
 	API_TOKEN = f.read()
 	f.close()
 except IOError as e:
@@ -43,7 +43,9 @@ def apn():
 		return make_response(jsonify({ 'error': '`deviceToken` is required' }), 400)
 
 	if api_token == API_TOKEN:
-		return jsonify({ 'result': 'Device token: {}'.format(device_token) })
+		dbinsert(db, 'INSERT INTO devices (id, first_seen) VALUES (%s, NOW())', (device_token,))
+		row = dbselectone(db, 'SELECT * FROM devices WHERE id = %s', (device_token,))
+		return jsonify({ 'result': row })
 	else:
 		return make_response(jsonify({ 'error': 'Invalid API Token' }), 400)
 
