@@ -10,6 +10,8 @@ import UIKit
 import Fabric
 import TwitterKit
 
+let serverPrefix:String = "http://twatch.final-frontier.space"
+let serverAPIKey:String = "5fca162b8b3a50d7c853ae6ebf494ba2"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,9 +50,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .stringByTrimmingCharactersInSet( characterSet )
             .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
         
+        
         println( deviceTokenString )
+        notifyServerOfDeviceToken(deviceTokenString as String)
         
 //        Send device token to server
+    }
+    
+    func notifyServerOfDeviceToken(deviceToken:String){
+        let url = NSURL(string: (serverPrefix as String)+"/api/v1/apn")
+        
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+
+        var params = ["deviceToken":(deviceToken as String)] as Dictionary<String, String>
+        var err: NSError?
+        
+        let postString = "deviceToken="+deviceToken
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        request.addValue(serverAPIKey, forHTTPHeaderField: "X-API-Token")
+        
+        println(request.description)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            
+            if let resultError = error as NSError? {
+                //Handle error!
+                println("Device Token wasn't sent to server:")
+            }else{
+                println("Successfully sent deviceToken!")
+                println(NSString(data:data, encoding:NSUTF8StringEncoding))
+            }
+        }
     }
     
     func application( application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError ) {
