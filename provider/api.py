@@ -9,14 +9,15 @@ import transients as trans
 from utils import convert_from_j2000, create_api_token
 
 API_TOKEN = None
+TOKEN_PATH = os.path.join(os.path.dirname(__file__), 'api_token')
 try:
-	f = open('provider/api_token', 'r')
+	f = open(TOKEN_PATH, 'r')
 	API_TOKEN = f.read()
 	f.close()
 except IOError as e:
 	print 'No API token'
 	try:
-		f = open('provider/api_token', 'w+')
+		f = open(TOKEN_PATH, 'w+')
 		f.write(create_api_token())
 		f.close()
 	except IOError as e:
