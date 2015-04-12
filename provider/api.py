@@ -4,7 +4,7 @@ import os
 NaN = float('nan')
 
 # initialize database
-from db import db, dbinsert, dbselectone
+from db import db, dbinsert, dbselectone, dbupdate
 import transients as trans
 from utils import convert_from_j2000, create_api_token
 
