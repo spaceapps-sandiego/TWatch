@@ -1,26 +1,23 @@
 import MySQLdb as mdb
-from db import db
+from db import db, dbselectone, dbselect
 
-def find_transients(name=None):
+INTENSITY_SELECT = 'SELECT * FROM intensities WHERE trans_id = %s'
+
+def find_transients(name=None, lean=False):
 	query = 'SELECT * FROM transients'
 	if name is not None:
 		query += ' WHERE name = %s'
 
-	cur = db.cursor()
-	if name is not None:
-		cur.execute(query, (name,))
-	else:
-		cur.execute(query)
-	rows = cur.fetchall()
-	cur.close()
-
+	rows = dbselect(db, query, (name,) if name is not None else ())
+	if not lean:
+		for row in rows:
+			row['events'] = dbselect(db, INTENSITY_SELECT, (row['id'],))
 	return rows
 
-def find_transient_by_id(id):
+def find_transient_by_id(id, lean=False):
 	query = 'SELECT * FROM transients WHERE id = %s'
-	cur = db.cursor()
-	cur.execute(query, (id,))
-	row = cur.fetchone()
-	cur.close()
+	row = dbselectone(db, query, (id,))
+	if not lean:
+		row['events'] = dbselect(db, INTENSITY_SELECT, (row['id'],))
 
 	return row

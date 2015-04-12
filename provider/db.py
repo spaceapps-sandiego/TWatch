@@ -9,3 +9,22 @@ try:
 except mdb.Error, e:
 	print 'Error %d: %s' % (e.args[0], e.args[1])
 	sys.exit(1)
+
+def dbinsert(db, *args):
+	cur = db.cursor()
+	cur.execute(*args)
+	cur.close()
+
+def dbselectone(db, *args):
+	cur = db.cursor()
+	cur.execute(*args)
+	ret = cur.fetchone()
+	cur.close()
+	return ret
+
+def dbselect(db, *args):
+	cur = db.cursor()
+	cur.execute(*args)
+	ret = cur.fetchall()
+	cur.close()
+	return ret
