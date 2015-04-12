@@ -39,7 +39,7 @@ def convert():
 
 	return jsonify({'ra': ra, 'dec': dec })
 
-
-# start up server
-PORT = os.getenv('PORT') or 8008
-api.run(host='0.0.0.0', port=PORT, debug=True)
+if __name__ == '__main__':
+	# start up server
+	PORT = os.getenv('PORT') or 8008
+	api.run(host='0.0.0.0', port=PORT, debug=True)
