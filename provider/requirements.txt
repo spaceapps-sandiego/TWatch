@@ -8,4 +8,5 @@ beautifulsoup4==4.3.2
 itsdangerous==0.24
 mysql==0.0.1
 numpy==1.9.2
+pyDAL==15.03
 wsgiref==0.1.2
