@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-//        Twitter.sharedInstance().startWithConsumerKey("your_key", consumerSecret: "your_secret")
+        Twitter.sharedInstance().startWithConsumerKey("MB0Xv3QLsFMbKmxziIV0qOwLl", consumerSecret: "iEXJ27K3rDWrHDu1rNFEqsngvKLI8nEn3LoFmCTs1cPMMBHJCz")
         Fabric.with([Twitter.sharedInstance()])
         Twitter.sharedInstance().logInGuestWithCompletion { guestSession, error in
             if (guestSession != nil) {
