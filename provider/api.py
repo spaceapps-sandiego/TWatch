@@ -51,8 +51,14 @@ def apn():
 			return make_response(jsonify({ 'error': '`deviceToken` is required' }), 400)
 
 		if api_token == API_TOKEN:
-			dbinsert(db, 'INSERT INTO devices (id, first_seen) VALUES (%s, NOW())', (device_token,))
 			row = dbselectone(db, 'SELECT * FROM devices WHERE id = %s', (device_token,))
+			if row is None:
+				dbinsert(db, 'INSERT INTO devices (id, first_seen) VALUES (%s, NOW())', (device_token,))
+				row = dbselectone(db, 'SELECT * FROM devices WHERE id = %s', (device_token,))
+			else:
+				dbupdate(db, 'UPDATE devices SET last_seen = NOW() WHERE id = %s', (device_token,))
+				row = dbselectone(db, 'SELECT * FROM devices WHERE id = %s', (device_token,))
+			db.commit()
 			return jsonify({ 'result': row })
 		else:
 			return make_response(jsonify({ 'error': 'Invalid API Token' }), 400)

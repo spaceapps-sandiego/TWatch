@@ -28,3 +28,8 @@ def dbselect(db, *args):
 	ret = cur.fetchall()
 	cur.close()
 	return ret
+
+def dbupdate(db, *args):
+	cur = db.cursor()
+	cur.execute(*args)
+	cur.close()
