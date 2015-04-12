@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController_Info: UIViewController {
+class ViewController_Info: UIViewController, UIBarPositioningDelegate {
+    
+    @IBOutlet weak var uiImageBackground: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var blurView:UIVisualEffectView=UIVisualEffectView.alloc();
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +24,9 @@ class ViewController_Info: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition{
+        return UIBarPosition.TopAttached;
+    }
 
     /*
     // MARK: - Navigation

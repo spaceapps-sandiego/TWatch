@@ -7,13 +7,41 @@
 //
 
 import UIKit
+import TwitterKit
+import Fabric
 
-class ViewController_News: UIViewController {
+class ViewController_News: TWTRTimelineViewController, UIBarPositioningDelegate {
 
+    convenience init() {
+        let client = Twitter.sharedInstance().APIClient
+        let dataSource = TWTRUserTimelineDataSource(screenName: "fabric", APIClient: client)
+        
+        self.init(dataSource: dataSource)
+    }
+    override required init(dataSource: TWTRTimelineDataSource) {
+        super.init(dataSource: dataSource)
+    }
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        Twitter.sharedInstance().startWithConsumerKey("tLYPquifU0Vq5GRRHnZbiSYr4", consumerSecret: "lS5zIjVxuTU0eLYcDqRUC5PrB3B0kC58H2ry6hrYbj4LPBIhhk")
+//        Fabric.with([Twitter.sharedInstance()])
+        
+        Twitter.sharedInstance().logInGuestWithCompletion { guestSession, error in
+            if (guestSession != nil) {
+                // make API calls that do not require user auth
+            } else {
+                println("error: \(error.localizedDescription)");
+            }
+        }
 
-        // Do any additional setup after loading the view.
+        
+        let client = Twitter.sharedInstance().APIClient
+        let dataSource = TWTRUserTimelineDataSource(screenName: "fabric", APIClient: client)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +49,9 @@ class ViewController_News: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition{
+        return UIBarPosition.TopAttached;
+    }
 
     /*
     // MARK: - Navigation

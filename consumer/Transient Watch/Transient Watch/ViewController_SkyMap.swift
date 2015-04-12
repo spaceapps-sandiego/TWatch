@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController_SkyMap: UIViewController {
+    @IBOutlet weak var uiImageViewCamera: UIImageView!
+    var previewLayer : CALayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false);
+    }
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false);
     }
 
     override func didReceiveMemoryWarning() {

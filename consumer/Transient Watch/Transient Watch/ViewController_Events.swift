@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController_Events: UIViewController {
+class ViewController_Events: UIViewController, UIBarPositioningDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class ViewController_Events: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition{
+        return UIBarPosition.TopAttached;
+    }
 
     /*
     // MARK: - Navigation
