@@ -7,7 +7,7 @@
         <!--Phenomena-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ViewController_Events" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -48,7 +48,7 @@
         <!--News-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ViewController_News" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -88,7 +88,7 @@
         <!--Info-->
         <scene sceneID="HFf-pq-ECi">
             <objects>
-                <viewController id="YOT-qJ-2uI" sceneMemberID="viewController">
+                <viewController id="YOT-qJ-2uI" customClass="ViewController_Info" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gdd-Az-Qr9"/>
                         <viewControllerLayoutGuide type="bottom" id="2tz-TS-Q3x"/>
@@ -107,7 +107,7 @@
         <!--Sky Map-->
         <scene sceneID="Dpb-OV-7Eq">
             <objects>
-                <viewController id="uJp-U0-NzM" sceneMemberID="viewController">
+                <viewController id="uJp-U0-NzM" customClass="ViewController_SkyMap" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dfb-WD-FSO"/>
                         <viewControllerLayoutGuide type="bottom" id="pdR-Pw-M2O"/>
