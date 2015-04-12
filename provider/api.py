@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 import os
 
 NaN = float('nan')
@@ -7,6 +7,14 @@ NaN = float('nan')
 from db import db
 import transients as trans
 from utils import convert_from_j2000
+
+API_TOKEN = None
+try:
+	f = open('../api.token', 'r')
+	API_TOKEN = f.read()
+	f.close()
+except IOError as e:
+	print 'No API token'
 
 api = Flask(__name__)
 
@@ -22,6 +30,22 @@ def transient_by_id(id):
 	lean = request.values.get('lean')
 	row = trans.find_transient_by_id(id, lean=lean)
 	return jsonify({ 'result': row })
+
+@api.route('/api/v1/apn', methods=['POST'])
+def apn():
+	device_token = request.values.get('deviceToken')
+	api_token = request.headers.get('X-API-Token')
+
+	if API_TOKEN is None:
+		return make_response(jsonify({ 'error': 'This endpoint is currently disabled' }), 500)
+
+	if device_token is None:
+		return make_response(jsonify({ 'error': '`deviceToken` is required' }), 400)
+
+	if api_token == API_TOKEN:
+		return jsonify({ 'result': 'Device token: {}'.format(device_token) })
+	else:
+		return make_response(jsonify({ 'error': 'Invalid API Token' }), 400)
 
 @api.route('/api/v1/convert', methods=['GET', 'POST'])
 def convert():
