@@ -3,3 +3,4 @@ venv
 *.pyc
 *.pyx
 api_token
+*.table

@@ -228,7 +228,7 @@ def xref_master_daily(master, daily):
 	for row in daily:
 		ra, dec, err = row['ra'], row['dec'], row['error']
 
-		for tr in trans_table:
+		for tr in master:
 			tr_ra  = tr['RA J2000 Degs']
 			tr_dec  = tr['Dec J2000 Degs']
 
