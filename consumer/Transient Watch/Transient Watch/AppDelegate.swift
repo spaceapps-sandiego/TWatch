@@ -11,6 +11,7 @@ import Fabric
 import TwitterKit
 
 let serverPrefix:String = "http://twatch.final-frontier.space"
+//let serverPrefix:String = "http://192.168.253.11:8080"
 let serverAPIKey:String = "5fca162b8b3a50d7c853ae6ebf494ba2"
 
 @UIApplicationMain
@@ -40,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings( settings )
         application.registerForRemoteNotifications()
         
-                        return true
+        return true
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {

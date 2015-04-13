@@ -19,14 +19,19 @@ class ViewController_Events: UITableViewController, UIBarPositioningDelegate {
         let url = NSURL(string: (serverPrefix as String)+"/api/v1/transients")
         let request = NSURLRequest(URL: url!)
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-            
-            if let resultError = error as NSError? {
-                //Handle error!
-            }else{
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url!) { (data, response, error) -> Void in
+            if error != nil {
+                
+                println("There was an error requesting event data from the server: "+error.description)
+            } else {
                 self.loadEventData(data)
             }
         }
+        
+        
+        task.resume()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,8 +44,24 @@ class ViewController_Events: UITableViewController, UIBarPositioningDelegate {
         
         for detection in results {
             phenomenaEventData.append(detection as! NSDictionary)
+//            println(self.phenomenaEventData)
         }
-//        println(self.phenomenaEventData)
+        self.tableView.reloadData()
+    }
+    
+// MARK: table programmatics
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.phenomenaEventData.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        return tableView.dequeueReusableCellWithIdentifier("cellPhenomena") as! UITableViewCell
     }
 
     override func didReceiveMemoryWarning() {
