@@ -5,7 +5,7 @@ from provider.api import api
 
 def application(environ, responder):
 	try:
-		api(environ, responder)
+		return api(environ, responder)
 	except IOError as e:
-		resp = make_response(jsonify({ 'error': 'Something went wrong'}), 500)
+		resp = make_response(jsonify({ 'error': 'Something went wrong' }), 500)
 		return resp(environ, responder)
