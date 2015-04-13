@@ -19,6 +19,14 @@
 		15CEFB8E1ADA3CB900F9DA1E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CEFB8B1ADA3CB900F9DA1E /* TwitterKit.framework */; };
 		15CEFB8F1ADA3CB900F9DA1E /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15CEFB8C1ADA3CB900F9DA1E /* TwitterKitResources.bundle */; };
 		15CEFB901ADA3CB900F9DA1E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CEFB8D1ADA3CB900F9DA1E /* Fabric.framework */; };
+		F94303C21ADB27CE0060B825 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F94303C11ADB27CE0060B825 /* CoreMotion.framework */; };
+		F9D3280B1ADAE7BA00B6E197 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3280A1ADAE7BA00B6E197 /* AVFoundation.framework */; };
+		F9D3280D1ADAE8D300B6E197 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3280C1ADAE8D300B6E197 /* AssetsLibrary.framework */; };
+		F9D3280F1ADAE8DA00B6E197 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3280E1ADAE8DA00B6E197 /* CoreMedia.framework */; };
+		F9D328111ADAE8E000B6E197 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D328101ADAE8E000B6E197 /* MediaPlayer.framework */; };
+		F9D328131ADAE8E900B6E197 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D328121ADAE8E900B6E197 /* MobileCoreServices.framework */; };
+		F9D328151ADAE8F200B6E197 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D328141ADAE8F200B6E197 /* QuartzCore.framework */; };
+		F9D328171ADB048C00B6E197 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D328161ADB048C00B6E197 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,14 @@
 		15CEFB8B1ADA3CB900F9DA1E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		15CEFB8C1ADA3CB900F9DA1E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		15CEFB8D1ADA3CB900F9DA1E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		F94303C11ADB27CE0060B825 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F9D3280A1ADAE7BA00B6E197 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F9D3280C1ADAE8D300B6E197 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F9D3280E1ADAE8DA00B6E197 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F9D328101ADAE8E000B6E197 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F9D328121ADAE8E900B6E197 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F9D328141ADAE8F200B6E197 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F9D328161ADB048C00B6E197 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94303C21ADB27CE0060B825 /* CoreMotion.framework in Frameworks */,
+				F9D328171ADB048C00B6E197 /* CoreLocation.framework in Frameworks */,
+				F9D328151ADAE8F200B6E197 /* QuartzCore.framework in Frameworks */,
+				F9D328131ADAE8E900B6E197 /* MobileCoreServices.framework in Frameworks */,
+				F9D328111ADAE8E000B6E197 /* MediaPlayer.framework in Frameworks */,
+				F9D3280F1ADAE8DA00B6E197 /* CoreMedia.framework in Frameworks */,
+				F9D3280D1ADAE8D300B6E197 /* AssetsLibrary.framework in Frameworks */,
+				F9D3280B1ADAE7BA00B6E197 /* AVFoundation.framework in Frameworks */,
 				15CEFB8E1ADA3CB900F9DA1E /* TwitterKit.framework in Frameworks */,
 				15CEFB901ADA3CB900F9DA1E /* Fabric.framework in Frameworks */,
 			);
@@ -73,6 +97,14 @@
 		152C60841AD9CB680007926C = {
 			isa = PBXGroup;
 			children = (
+				F94303C11ADB27CE0060B825 /* CoreMotion.framework */,
+				F9D328161ADB048C00B6E197 /* CoreLocation.framework */,
+				F9D328141ADAE8F200B6E197 /* QuartzCore.framework */,
+				F9D328121ADAE8E900B6E197 /* MobileCoreServices.framework */,
+				F9D328101ADAE8E000B6E197 /* MediaPlayer.framework */,
+				F9D3280E1ADAE8DA00B6E197 /* CoreMedia.framework */,
+				F9D3280C1ADAE8D300B6E197 /* AssetsLibrary.framework */,
+				F9D3280A1ADAE7BA00B6E197 /* AVFoundation.framework */,
 				15CEFB8B1ADA3CB900F9DA1E /* TwitterKit.framework */,
 				15CEFB8C1ADA3CB900F9DA1E /* TwitterKitResources.bundle */,
 				15CEFB8D1ADA3CB900F9DA1E /* Fabric.framework */,
@@ -383,6 +415,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -401,6 +434,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
