@@ -8,7 +8,8 @@ def run():
 	print num_updated
 
 	if (num_updated>0):
-		send_push_to_all("There have been %n new events today", (num_updated))
+		sendstr = "There have been %n new events today", (num_updated)
+		send_push_to_all(sendstr)
 
 	
 	knowns = get_knowns('150411')
