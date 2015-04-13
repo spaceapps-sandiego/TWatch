@@ -6,60 +6,54 @@
     </dependencies>
     <scenes>
         <!--Phenomena-->
-        <scene sceneID="hNz-n2-bh7">
+        <scene sceneID="aLx-X9-TTl">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="ViewController_Events" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                <tableViewController id="wvL-SN-a58" customClass="ViewController_Events" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eb0-zd-t9d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="zMi-Kl-qal">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Transient Watch" id="jxU-e6-nzZ">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="DJA-G6-NLi">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="GJC-jy-GUk"/>
-                                </connections>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zMi-Kl-qal" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="8pe-Bv-tfh"/>
-                            <constraint firstItem="zMi-Kl-qal" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="S5O-nx-lNl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zMi-Kl-qal" secondAttribute="trailing" constant="-16" id="nqd-Fy-pUG"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Phenomena" image="FeedIcon" id="acW-dT-cKf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPhenomena" rowHeight="70" id="tpT-zd-qEl">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tpT-zd-qEl" id="LQ0-He-w9w">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Object Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYp-DA-0Ab">
+                                            <rect key="frame" x="8" y="8" width="193" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0A-TS-9eB">
+                                            <rect key="frame" x="339" y="7" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wvL-SN-a58" id="IYt-eJ-fqo"/>
+                            <outlet property="delegate" destination="wvL-SN-a58" id="G2w-7b-Gwm"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Phenomena" image="FeedIcon" id="fKW-cM-MIY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9B-LP-vNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-636"/>
+            <point key="canvasLocation" x="744" y="-700"/>
         </scene>
         <!--News-->
         <scene sceneID="3xX-xR-Yya">
             <objects>
                 <tableViewController id="6Lh-rU-A2Q" customClass="ViewController_News" customModule="Transient_Watch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cyG-su-Tvn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="cyG-su-Tvn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tpT-zd-qEl">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tpT-zd-qEl" id="LQ0-He-w9w">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="6Lh-rU-A2Q" id="S1M-Fy-SwG"/>
                             <outlet property="delegate" destination="6Lh-rU-A2Q" id="wZO-jq-jlp"/>
@@ -163,9 +157,9 @@
                         <color key="tintColor" red="0.28622058207014101" green="0.60608389055603085" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="6Lh-rU-A2Q" kind="relationship" relationship="viewControllers" id="M05-ip-ZBS"/>
+                        <segue destination="wvL-SN-a58" kind="relationship" relationship="viewControllers" id="4ET-g5-Vn6"/>
                         <segue destination="uJp-U0-NzM" kind="relationship" relationship="viewControllers" id="n3a-2e-aWw"/>
+                        <segue destination="6Lh-rU-A2Q" kind="relationship" relationship="viewControllers" id="M05-ip-ZBS"/>
                         <segue destination="YOT-qJ-2uI" kind="relationship" relationship="viewControllers" id="pUm-0E-jKV"/>
                     </connections>
                 </tabBarController>
