@@ -225,11 +225,10 @@ def cross_reference(trans_table, grbs_table):
 
 def xref_master_daily(master, daily):
 	results = {}
-	trans_table = get_master_table
 	for row in daily:
 		ra, dec, err = row['ra'], row['dec'], row['error']
 
-		for tr in trans_table:
+		for tr in master:
 			tr_ra  = tr['RA J2000 Degs']
 			tr_dec  = tr['Dec J2000 Degs']
 
