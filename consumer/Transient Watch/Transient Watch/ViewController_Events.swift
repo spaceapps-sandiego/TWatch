@@ -46,7 +46,7 @@ class ViewController_Events: UITableViewController, UIBarPositioningDelegate {
             phenomenaEventData.append(detection as! NSDictionary)
 //            println(self.phenomenaEventData)
         }
-        self.tableView.reloadData()
+        self.tableView.reloadRowsAtIndexPaths(self.tableView.indexPathsForVisibleRows()!, withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
 // MARK: table programmatics
