@@ -2,3 +2,5 @@ venv
 *.log
 *.pyc
 *.pyx
+api_token
+*.table

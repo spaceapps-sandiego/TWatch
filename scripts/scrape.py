@@ -16,8 +16,8 @@ GCN_KNOWN_URL = 'http://gcn.gsfc.nasa.gov/sub_sub_archive/known_%s.txt' # date: 
 COLUMNS = ['delta_time', 'type_num', 'ser_num', 'tjd', 'sod', 'trigger_num', 'ra', 'dec', 'error', 'intensity', 'sigma']
 
 INSERT_INTENSITY = 'INSERT INTO intensities \
-		   (intensity, error, sigma, trans_id, detected_time) \
-		   VALUES (%s, %s, %s, %s, %s);'
+			 (intensity, error, sigma, trans_id, detected_time) \
+			 VALUES (%s, %s, %s, %s, %s);'
 
 def makelist(table, start=1, end=-1, header=0):
 	result = []
@@ -76,6 +76,7 @@ def connectdb():
 
 def update_master(table):
 	db = connectdb()
+	count = 0
 
 	for row in table:
 		name = row['Source Name']
@@ -89,10 +90,12 @@ def update_master(table):
 					ra = float(ra)
 					dec = float(dec)
 					dbinsert(db, "INSERT INTO transients (name, ra, `dec`, `type`) VALUES (%s,%s,%s,%s)", (name, ra, dec, source_type))
+					count+=1
 				except ValueError as e:
 					continue
 
 	db.commit()
+	return count
 
 def create_dict(row, fields):
 	if len(row) < len(fields):

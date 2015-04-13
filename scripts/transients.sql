@@ -7,8 +7,9 @@
 
 -- USE trans;
 
-DROP TABLE IF EXISTS intensities;
-DROP TABLE IF EXISTS transients;
+-- DROP TABLE IF EXISTS intensities;
+-- DROP TABLE IF EXISTS transients;
+-- DROP TABLE IF EXISTS devices;
 
 CREATE TABLE transients (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -17,7 +18,7 @@ CREATE TABLE transients (
 	ra VARCHAR(256) NOT NULL,
 	`dec` VARCHAR(256) NOT NULL,
 	PRIMARY KEY(ID),
-  FULLTEXT (name)
+  INDEX name_idx (name)
 ) ENGINE=InnoDB;
 
 CREATE  TABLE intensities (
@@ -36,3 +37,9 @@ CREATE  TABLE intensities (
     ON UPDATE NO ACTION
 ) ENGINE=InnoDB;
 
+CREATE TABLE devices (
+  id VARCHAR(64) NOT NULL,
+  last_seen TIMESTAMP,
+  first_seen TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;

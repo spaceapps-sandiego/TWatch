@@ -13,8 +13,10 @@ import Fabric
 class ViewController_News: TWTRTimelineViewController, UIBarPositioningDelegate {
 
     convenience init() {
+        
+
         let client = Twitter.sharedInstance().APIClient
-        let dataSource = TWTRUserTimelineDataSource(screenName: "fabric", APIClient: client)
+        let dataSource = TWTRUserTimelineDataSource(screenName: "SpaceAppsBoston", APIClient: client)
         
         self.init(dataSource: dataSource)
     }
@@ -26,23 +28,7 @@ class ViewController_News: TWTRTimelineViewController, UIBarPositioningDelegate 
 //        fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        Twitter.sharedInstance().startWithConsumerKey("tLYPquifU0Vq5GRRHnZbiSYr4", consumerSecret: "lS5zIjVxuTU0eLYcDqRUC5PrB3B0kC58H2ry6hrYbj4LPBIhhk")
-//        Fabric.with([Twitter.sharedInstance()])
-        
-        Twitter.sharedInstance().logInGuestWithCompletion { guestSession, error in
-            if (guestSession != nil) {
-                // make API calls that do not require user auth
-            } else {
-                println("error: \(error.localizedDescription)");
-            }
-        }
-
-        
-        let client = Twitter.sharedInstance().APIClient
-        let dataSource = TWTRUserTimelineDataSource(screenName: "fabric", APIClient: client)
-    }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
