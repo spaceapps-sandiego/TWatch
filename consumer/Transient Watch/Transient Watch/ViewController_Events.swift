@@ -46,7 +46,10 @@ class ViewController_Events: UITableViewController, UIBarPositioningDelegate {
             phenomenaEventData.append(detection as! NSDictionary)
 //            println(self.phenomenaEventData)
         }
-        self.tableView.reloadRowsAtIndexPaths(self.tableView.indexPathsForVisibleRows()!, withRowAnimation: UITableViewRowAnimation.Automatic)
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+            self.tableView.reloadRowsAtIndexPaths(self.tableView.indexPathsForVisibleRows()!, withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
     }
     
 // MARK: table programmatics
@@ -60,8 +63,22 @@ class ViewController_Events: UITableViewController, UIBarPositioningDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        return tableView.dequeueReusableCellWithIdentifier("cellPhenomena") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellPhenomena") as! UITableViewCell
+        var labelObjectName:UILabel = cell.viewWithTag(1) as! UILabel
+        var labelObjectType:UILabel = cell.viewWithTag(2) as! UILabel
+        var labelNumEvents:UILabel = cell.viewWithTag(3) as! UILabel
+        var labelRightAscension:UILabel = cell.viewWithTag(5) as! UILabel
+        var labelDeclination:UILabel = cell.viewWithTag(4) as! UILabel
+        
+        
+        labelObjectName.text = (phenomenaEventData[indexPath.row]["name"] as! String)
+        labelObjectType.text = (phenomenaEventData[indexPath.row]["type"] as! String)
+        let events = phenomenaEventData[indexPath.row]["events"] as? Array<NSDictionary>
+        labelNumEvents.text =  "Events \(events!.count)"
+        labelRightAscension.text = "RA: "+String(stringInterpolationSegment: phenomenaEventData[indexPath.row]["ra"]!)
+        labelDeclination.text = "Dec: "+String(stringInterpolationSegment: phenomenaEventData[indexPath.row]["dec"]!)
+        
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
