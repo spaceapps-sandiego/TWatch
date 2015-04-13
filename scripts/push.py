@@ -45,7 +45,7 @@ def send_push_to_all(notice):
 	tokens = dbselect(db, 'SELECT id FROM devices')
 	
 	for token in tokens:
-		print ("sending %s to %s" % (notice, token['id']))
+		#print ("sending %s to %s" % (notice, token['id']))
 		apns.gateway_server.send_notification(token['id'], payload)
 
 	# Send multiple notifications in a single transmission
