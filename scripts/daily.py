@@ -10,9 +10,11 @@ def run():
 	if (num_updated>0):
 		send_push_to_all("There have been %n new events today", (num_updated))
 
+	
+	knowns = get_knowns('150411')
 
-	# get knowns
-	insert_knowns()
+	results = xref_master_daily(table, knowns)
+	insert_knowns(results)
 
 if __name__ == '__main__':
 	run()
