@@ -1,4 +1,4 @@
-from scrape import get_master_table, update_master, insert_knowns, get_knowns
+from scrape import *
 from push import send_push_to_all
 
 def run():
