@@ -8,7 +8,7 @@ def run():
 	print num_updated
 
 	if (num_updated>0):
-		sendstr = "There have been %n new events today", (num_updated)
+		sendstr = "There have been %n new events today" % (num_updated)
 		send_push_to_all(sendstr)
 
 	
